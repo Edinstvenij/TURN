@@ -33,6 +33,7 @@ body {
   overflow: hidden;
 
   &__wrapper {
+    position: fixed;
     display: flex;
     height: 100%;
     width: 140%;
@@ -159,7 +160,7 @@ body {
     right: 75px;
 
     width: 40px;
-    height: 30px;
+    height: 40px;
 
     cursor: pointer;
 
@@ -178,13 +179,13 @@ body {
     }
 
     &::before {
-      top: 0;
+      top: 20px;
       transform: rotate(-45deg);
 
     }
 
     &::after {
-      bottom: 1;
+      bottom: 19px;
       transform: rotate(45deg);
     }
 
