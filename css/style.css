@@ -155,6 +155,35 @@ body {
   transition: transform 1s, -webkit-transform 1s;
 }
 
+.header__marquee {
+  position: absolute;
+  z-index: 6;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 43px;
+  max-width: 100%;
+  padding: 4px 0px;
+  color: #fff;
+  font-style: italic;
+  font-size: 22px;
+  background: -webkit-gradient(linear, left top, right top, from(#FFD704), to(rgba(255, 215, 4, 0))), #0038FF;
+  background: linear-gradient(90deg, #FFD704 0%, rgba(255, 215, 4, 0) 100%), #0038FF;
+}
+
+.header__marquee div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 230%;
+  -webkit-animation: marquee-infinite 7s linear infinite;
+          animation: marquee-infinite 7s linear infinite;
+}
+
+.header__marquee p {
+  white-space: nowrap;
+  width: 130%;
+}
+
 .header__nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -238,35 +267,6 @@ body {
           transform: rotate(45deg);
 }
 
-.header__marquee {
-  position: absolute;
-  z-index: 6;
-  overflow: hidden;
-  margin: 0 auto;
-  margin-top: 43px;
-  max-width: 100%;
-  padding: 4px 0px;
-  color: #fff;
-  font-style: italic;
-  font-size: 22px;
-  background: -webkit-gradient(linear, left top, right top, from(#FFD704), to(rgba(255, 215, 4, 0))), #0038FF;
-  background: linear-gradient(90deg, #FFD704 0%, rgba(255, 215, 4, 0) 100%), #0038FF;
-}
-
-.header__marquee div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 230%;
-  -webkit-animation: marquee-infinite 7s linear infinite;
-          animation: marquee-infinite 7s linear infinite;
-}
-
-.header__marquee p {
-  white-space: nowrap;
-  width: 130%;
-}
-
 @-webkit-keyframes marquee-infinite {
   0% {
     -webkit-transform: translateX(0%);
@@ -305,14 +305,19 @@ body {
 }
 
 .slider__slide {
-  width: 100%;
-  text-align: center;
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
 }
 
 .slider__slide img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
 }
 
 .row {
