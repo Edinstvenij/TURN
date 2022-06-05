@@ -16,9 +16,20 @@
 new Swiper('.slider', {
   loop: true,
   simulateTouch: false,
+  touchRatio: 0,
   speed: 1000,
   autoplay: {
     delay: 3000,
     stopOnLastSlide: false,
   }
+});
+
+new Swiper('.product-preview__slider', {
+  //Слайдер отключаеться если всего 1 слайд(Фото)
+  watchOverflow: true,
+  //стрелки
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  },
 });
