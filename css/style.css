@@ -394,6 +394,8 @@ body {
 }
 
 .slider__slide img {
+  -o-object-fit: cover;
+     object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
@@ -824,4 +826,12 @@ all-product.html
      object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.product-preview__slider-button-prev {
+  background-image: url(/img/product/arrow-left.svg);
+}
+
+.product-preview__slider-button-next {
+  background-image: url(/img/product/arrow-right.svg);
 }

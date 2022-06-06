@@ -285,6 +285,7 @@ body {
     overflow: hidden;
 
     img {
+      object-fit: cover;
       position: absolute;
       top: 0;
       left: 0;
@@ -632,6 +633,14 @@ all-product.html
         width: 100%;
         height: 100%;
       }
+    }
+
+    &-button-prev {
+      background-image: url(/img/product/arrow-left.svg);
+    }
+
+    &-button-next {
+      background-image: url(/img/product/arrow-right.svg);
     }
   }
 }

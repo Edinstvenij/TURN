@@ -29,7 +29,7 @@ new Swiper('.product-preview__slider', {
   watchOverflow: true,
   //стрелки
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
+    nextEl: '.product-preview__slider-button-next',
+    prevEl: '.product-preview__slider-button-prev'
   },
 });
