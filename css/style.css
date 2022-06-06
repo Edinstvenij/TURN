@@ -200,8 +200,11 @@ body {
   padding: 4px 0px;
   color: #fff;
   font-style: italic;
-  background: -webkit-gradient(linear, left top, right top, from(#FFD704), to(rgba(255, 215, 4, 0))), #0038FF;
-  background: linear-gradient(90deg, #FFD704 0%, rgba(255, 215, 4, 0) 100%), #0038FF;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 213, 4, 0.911)), to(rgba(255, 215, 4, 0))), #0038FF;
+  background: linear-gradient(90deg, rgba(255, 213, 4, 0.911) 0%, rgba(255, 215, 4, 0) 100%), #0038FF;
+  -webkit-animation: gradient 5s infinite linear;
+          animation: gradient 5s infinite linear;
+  background-size: 200%;
 }
 
 @media (max-width: 767px) {
@@ -366,6 +369,30 @@ body {
   100% {
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
+  }
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 80% 0%;
+  }
+  50% {
+    background-position: 20% 100%;
+  }
+  100% {
+    background-position: 80% 0%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 80% 0%;
+  }
+  50% {
+    background-position: 20% 100%;
+  }
+  100% {
+    background-position: 80% 0%;
   }
 }
 

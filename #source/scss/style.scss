@@ -141,8 +141,16 @@ body {
     color: #fff;
     font-style: italic;
     @include adaptiv-font(28, 12);
-    background: linear-gradient(90deg, #FFD704 0%, rgba(255, 215, 4, 0) 100%), #0038FF;
+    // background: linear-gradient(90deg, #FFD704 0%, rgba(255, 215, 4, 0) 100%), #0038FF;
 
+
+    //animation marquee
+
+    background: linear-gradient(90deg, rgba(255, 213, 4, 0.911) 0%, rgba(255, 215, 4, 0) 100%), #0038FF;
+    animation: gradient 5s infinite linear; // 10s - скорость анимации
+    background-size: 200%; // Можно менять и подбирать интенсивность
+
+    //animation marquee END
 
     & div {
       display: flex;
@@ -261,6 +269,20 @@ body {
 
   100% {
     transform: translateX(-50%);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 80% 0%;
+  }
+
+  50% {
+    background-position: 20% 100%;
+  }
+
+  100% {
+    background-position: 80% 0%;
   }
 }
 
