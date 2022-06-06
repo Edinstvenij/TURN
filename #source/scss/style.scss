@@ -611,21 +611,26 @@ all-product.html
 .product-preview {
 
   &__slider {
+    padding: 30px 0px 50px;
 
-    &-wrapper {}
+    &-wrapper {
+      height: 440px;
+    }
 
     &-slide {
       padding: 0px 100px 0px;
     }
 
     &-wrapper-img {
-      max-height: 100%;
-      text-align: center;
+      width: 50%;
+      height: 100%;
+      margin: 0 auto;
+
 
       img {
         object-fit: cover;
-        max-width: 100%;
-        max-height: 100%;
+        width: 100%;
+        height: 100%;
       }
     }
   }
