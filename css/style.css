@@ -74,6 +74,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------*/
+/** 
+
+$maxWidth:xxx; (width content(.container) \ Ширена контентной части)
+$pcSize (PC font-size \ Подставляем размер шрифта для больших устройст)
+$mobSize (mobail font-size \ Подставляем размер шрифта для маленьких устройст)
+
+**/
 @font-face {
   font-family: 'Futura';
   src: url("../fonts/futura_pt_book.eot");
@@ -91,8 +98,13 @@ body {
 }
 
 .container {
-  padding: 0px 30px;
-  width: 100%;
+  max-width: 1236px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+
+.container-fix {
+  width: 1236px;
 }
 
 .header {
@@ -149,6 +161,7 @@ body {
 
 .header__burger {
   position: relative;
+  top: 6px;
   right: 63px;
   font-size: 14px;
   font-weight: 600;
@@ -383,18 +396,18 @@ body {
 }
 
 .footer {
-  position: relative;
-  z-index: 10;
-  padding: 10px 0px;
-  min-height: 100%;
-  background: #0038FF;
-  color: #FFD704;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+  z-index: 10;
+  padding: 10px 0px;
+  min-height: 100%;
+  background: #0038FF;
+  color: #FFD704;
 }
 
 .footer__col-name {
@@ -412,7 +425,9 @@ body {
 }
 
 .footer__col-li a {
+  display: block;
   color: inherit;
+  width: 100%;
 }
 
 .form__col {

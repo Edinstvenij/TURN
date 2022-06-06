@@ -1,6 +1,32 @@
 @import "_nullstyle";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,600;0,700;1,600&display=swap');
 
+
+//adapt fotns
+
+/** 
+
+$maxWidth:xxx; (width content(.container) \ Ширена контентной части)
+$pcSize (PC font-size \ Подставляем размер шрифта для больших устройст)
+$mobSize (mobail font-size \ Подставляем размер шрифта для маленьких устройст)
+
+**/
+$maxWidth: 1236;
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $addMobSize: $addSize +$addSize * 0.7;
+
+  @media (max-width: 767px) {
+    font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$maxWidth}));
+  }
+
+  @media (min-width: 767px) {
+    font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}));
+  }
+}
+
+//add fonts
 @font-face {
   font-family: 'Futura';
   src: url('../fonts/futura_pt_book.eot');
@@ -27,8 +53,13 @@ body {
 }
 
 .container {
-  padding: 0px 30px;
-  width: 100%;
+  max-width: #{$maxWidth + px};
+  margin: 0 auto;
+  padding: 0px 15px;
+
+  &-fix {
+    width: #{$maxWidth + px};
+  }
 }
 
 //header
@@ -82,6 +113,7 @@ body {
 
   &__burger {
     position: relative;
+    top: 6px;
     right: 63px;
     font-size: 14px;
     font-weight: 600;
@@ -291,6 +323,9 @@ body {
 
 //Footer
 .footer {
+  display: flex;
+  align-items: center;
+
   position: relative;
   z-index: 10;
   padding: 10px 0px;
@@ -298,8 +333,6 @@ body {
   background: #0038FF;
   color: #FFD704;
 
-  display: flex;
-  align-items: center;
 
   &__col-name {
     font-size: 64px;
@@ -307,7 +340,6 @@ body {
     margin-bottom: 14px;
   }
 
-  &__col-nav {}
 
   &__col-li {
     font-size: 20px;
@@ -317,9 +349,14 @@ body {
     margin-bottom: 10px;
 
     a {
+      display: block;
       color: inherit;
+      width: 100%;
     }
   }
+
+
+  &__wrapper {}
 }
 
 //Форма отправки смс
