@@ -839,13 +839,24 @@ all-product.html
   position: absolute;
   width: 100%;
   height: 100%;
-  font-size: 45px;
   font-weight: 700;
   color: rgba(0, 55, 255, 0);
   background: rgba(255, 255, 255, 0);
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
   pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  .grid__item-name {
+    font-size: calc(10px + 59.5 * ((100vw - 320px) / 1236));
+  }
+}
+
+@media (min-width: 767px) {
+  .grid__item-name {
+    font-size: calc(10px + 35 * (100vw / 1236));
+  }
 }
 
 .header-product-preview {
@@ -861,7 +872,7 @@ all-product.html
   padding: 0px 0px 100px;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 769px), (max-height: 620px) {
   .product-preview {
     padding: 0px 0px 40px;
   }
