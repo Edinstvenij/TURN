@@ -30,6 +30,9 @@ new Swiper('.product-preview__slider', {
   //стрелки
   navigation: {
     nextEl: '.product-preview__slider-button-next',
-    prevEl: '.product-preview__slider-button-prev',
+    prevEl: '.product-preview__slider-button-prev'
   },
+  keyboard: {
+    enable: true,
+  }
 });
