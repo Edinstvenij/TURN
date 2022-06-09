@@ -902,12 +902,12 @@ product-page.html
   position: fixed;
   width: 100%;
   height: 100%;
-  padding: 0px 0px 100px;
+  padding: 94px 0px 100px;
 }
 
 @media (max-width: 769px), (max-height: 620px) {
   .product-preview {
-    padding: 0px 0px 40px;
+    padding: 40px 0px 40px;
   }
 }
 
