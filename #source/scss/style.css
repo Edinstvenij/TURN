@@ -481,8 +481,8 @@ body {
 
 .wrapper-header-product-page-logo {
   width: 50px;
-  -webkit-animation: 4s mercury infinite linear;
-          animation: 4s mercury infinite linear;
+  -webkit-animation: 8s mercury infinite linear;
+          animation: 8s mercury infinite linear;
 }
 
 @-webkit-keyframes mercury {
