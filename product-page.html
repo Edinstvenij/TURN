@@ -14,7 +14,7 @@
 
 <body>
   <header class="header-product-preview">
-    <div class="container">
+    <div class="header-product-preview-wrapper">
       <div class="row row-jcsb row-ai-center">
         <div class="wrapper-img wrapper-header-product-page-logo">
           <a href="index.html"><img src="img/mini-logo.svg" alt=""></a>
@@ -29,48 +29,57 @@
       </div>
     </div>
   </header>
-  <section class="product-preview">
-    <!-- Slider main container -->
-    <div class="swiper product-preview__slider">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper product-preview__slider-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide product-preview__slider-slide">
-          <div class="product-preview__slider-wrapper-img">
-            <img src="img/product/1-product-noize-table.webp" alt="">
+  <section class="product-preview-wrapper">
+    <div class="product-preview">
+      <!-- Slider main container -->
+      <div class="swiper product-preview__slider">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper product-preview__slider-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide product-preview__slider-slide">
+            <div class="product-preview__slider-wrapper-img">
+              <img src="img/product/1-product-noize-table.webp" alt="">
+            </div>
+          </div>
+          <div class="swiper-slide product-preview__slider-slide">
+            <div class="product-preview__slider-wrapper-img">
+              <img src="img/product/2-product-noize-table.webp" alt="">
+            </div>
+          </div>
+          <div class="swiper-slide product-preview__slider-slide">
+            <div class="product-preview__slider-wrapper-img">
+              <img src="img/product/3-product-noize-table.webp" alt="">
+            </div>
+          </div>
+          <div class="swiper-slide product-preview__slider-slide">
+            <div class="product-preview__slider-wrapper-img">
+              <img src="img/product/4-product-noize-table.webp" alt="">
+            </div>
+          </div>
+          <div class="swiper-slide product-preview__slider-slide">
+            <div class="product-preview__slider-wrapper-img">
+              <img src="img/product/5-product-noize-table.webp" alt="">
+            </div>
           </div>
         </div>
-        <div class="swiper-slide product-preview__slider-slide">
-          <div class="product-preview__slider-wrapper-img">
-            <img src="img/product/2-product-noize-table.webp" alt="">
+        <!-- If we need navigation buttons -->
+        <div class="product-preview__slider-row-button">
+          <div class="product-preview__slider-button-prev">
+            <div class="product-preview__slider-wrapper-button">
+              <img src="img/product/arrow-left.svg" alt="">
+            </div>
+          </div>
+          <div class="product-preview__slider-button-next">
+            <div class="product-preview__slider-wrapper-button">
+              <img src="img/product/arrow-right.svg" alt="">
+            </div>
           </div>
         </div>
-        <div class="swiper-slide product-preview__slider-slide">
-          <div class="product-preview__slider-wrapper-img">
-            <img src="img/product/3-product-noize-table.webp" alt="">
-          </div>
-        </div>
-        <div class="swiper-slide product-preview__slider-slide">
-          <div class="product-preview__slider-wrapper-img">
-            <img src="img/product/4-product-noize-table.webp" alt="">
-          </div>
-        </div>
-        <div class="swiper-slide product-preview__slider-slide">
-          <div class="product-preview__slider-wrapper-img">
-            <img src="img/product/5-product-noize-table.webp" alt="">
-          </div>
-        </div>
-      </div>
-      <!-- If we need navigation buttons -->
-      <div class="product-preview__slider-row-button">
-        <div class="product-preview__slider-button-prev">
-          <div class="product-preview__slider-wrapper-button">
-            <img src="img/product/arrow-left.svg" alt="">
-          </div>
-        </div>
-        <div class="product-preview__slider-button-next">
-          <div class="product-preview__slider-wrapper-button">
-            <img src="img/product/arrow-right.svg" alt="">
+        <!-- If we need titles and order buttons -->
+        <div class="col product-preview__slider-col">
+          <div class="product-preview__slider-col-wrapper">
+            <p class="product-preview__slider-product-name">metall Table </p>
+            <button class="product-preview__slider-product-order-button">Check price</button>
           </div>
         </div>
       </div>

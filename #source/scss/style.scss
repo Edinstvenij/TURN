@@ -368,6 +368,17 @@ body {
 
   &-header-product-page-logo {
     width: 50px;
+    animation: 4s mercury infinite linear;
+  }
+
+  @keyframes mercury {
+    from {
+      transform: rotate(0)
+    }
+
+    to {
+      transform: rotate(360deg)
+    }
   }
 }
 
@@ -651,23 +662,38 @@ product-page.html
 **/
 
 .header-product-preview {
-  position: relative;
+
+  position: fixed;
   z-index: 20;
   padding-top: 30px;
   width: 100%;
 
   margin-bottom: -20px;
 
+  &-wrapper {
+    padding: 15px;
+  }
+
 }
 
 .product-preview {
-  height: calc(100% - 111px);
+  position: fixed;
+  width: 100%;
+  // height: calc(100% - 90px);
+  height: 100%;
   padding: 0px 0px 100px;
 
   @media (max-width:769px),
   (max-height:620px) {
     padding: 0px 0px 40px;
 
+  }
+
+
+
+
+  &-wrapper {
+    height: 100%;
   }
 
   &__slider {
@@ -733,19 +759,60 @@ product-page.html
       justify-content: end;
 
     }
+
+    &-col {
+      position: absolute;
+      z-index: 24;
+      top: 50%;
+      right: 15px;
+
+      text-transform: uppercase
+    }
+
+    &-col-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: end
+    }
+
+    &-product-name {
+      @include adaptiv-font(26, 13);
+      margin-bottom: 16px;
+    }
+
+    &-product-order-button {
+      @include adaptiv-font(16, 11);
+      padding: 9px 24px;
+
+      color: #FFFFFF;
+      background: #676767;
+
+      text-transform: uppercase
+    }
+
+
   }
 }
 
 
 .product-info {
+  position: relative;
+  z-index: 25;
   display: flex;
   align-items: center;
 
   padding: 0px 38px;
   background: #676767;
-  height: 45%;
+  height: 52%;
 
   overflow: hidden;
+  text-transform: uppercase;
+
+  @media (max-width:769px),
+  (max-height:620px) {
+    height: 48%;
+
+  }
 
   &__wrapper {
     width: 100%;
