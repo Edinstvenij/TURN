@@ -980,6 +980,7 @@ product-page.html
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  cursor: pointer;
 }
 
 @media (max-width: 761px) {
