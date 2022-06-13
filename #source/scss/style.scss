@@ -155,12 +155,13 @@ body {
     & div {
       display: flex;
       width: 230%;
-      animation: marquee-infinite 7s linear infinite;
+      animation: marquee-infinite 14s linear infinite;
     }
 
     & p {
       white-space: nowrap;
       width: 130%;
+      margin-right: 20px;
     }
   }
 
@@ -368,7 +369,7 @@ body {
 
   &-header-product-page-logo {
     width: 50px;
-    animation: 8s mercury infinite linear;
+    animation: 10s mercury infinite linear;
   }
 
   @keyframes mercury {
@@ -820,7 +821,7 @@ product-page.html
 
   padding: 5px 38px;
   background: #676767;
-  height: 52%;
+  min-height: 52%;
 
   overflow: hidden;
   text-transform: uppercase;
@@ -846,6 +847,7 @@ product-page.html
 
   &__info-name {
     @include adaptiv-font(26, 12);
+    white-space: nowrap;
     color: inherit;
 
     margin-bottom: 19px;
@@ -855,8 +857,13 @@ product-page.html
       margin-bottom: 0px;
     }
 
-    @media (max-height: 740px) {
-      font-size: 17px;
+    @media (max-height: 720px) {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    @media (max-height: 600px) {
+      font-size: 18px;
       margin-bottom: 10px;
     }
 
@@ -882,15 +889,20 @@ product-page.html
 
   &__info-li {
     @include adaptiv-font(16, 10);
+    white-space: nowrap;
     margin-bottom: 10px;
 
     &:last-child {
       margin-bottom: 0px;
     }
 
-    @media (max-height: 740px) {
-      font-size: 14px;
+    @media (max-height: 720px) {
+      font-size: 18px;
       margin-bottom: 4px;
+    }
+
+    @media (max-height: 600px) {
+      font-size: 13px;
     }
 
     @media (max-width: 510px) {
