@@ -465,7 +465,7 @@ body {
 }
 
 .wrapper-footer-logo {
-  width: 94px;
+  width: 83px;
   margin-right: 36px;
 }
 
@@ -572,6 +572,7 @@ body {
   text-transform: uppercase;
   color: #fff;
   margin-bottom: 10px;
+  line-height: 24px;
 }
 
 @media (max-width: 767px) {
@@ -607,6 +608,12 @@ body {
 @media (max-height: 485px) {
   .footer__col-li {
     margin-bottom: 3px;
+  }
+}
+
+@media (max-width: 605px) {
+  .footer__col-li {
+    line-height: normal;
   }
 }
 
@@ -675,7 +682,7 @@ body {
   }
 }
 
-@media (max-width: 367px) {
+@media (max-width: 427px) {
   .form-row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

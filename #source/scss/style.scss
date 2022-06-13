@@ -96,7 +96,6 @@ body {
 
       .header__nav-li {
         transform: translateX(0px);
-
       }
     }
   }
@@ -353,7 +352,7 @@ body {
   }
 
   &-footer-logo {
-    width: 94px;
+    width: 83px;
     margin-right: 36px;
 
     @media(max-width:400px) {
@@ -429,6 +428,7 @@ body {
     text-transform: uppercase;
     color: #fff;
     margin-bottom: 10px;
+    line-height: 24px;
 
     a {
       display: block;
@@ -446,6 +446,10 @@ body {
 
     @media(max-height: 485px) {
       margin-bottom: 3px;
+    }
+
+    @media(max-width: 605px) {
+      line-height: normal;
     }
   }
 }
@@ -495,7 +499,7 @@ body {
   }
 
   &-row {
-    @media(max-width:367px) {
+    @media(max-width:427px) {
       flex-direction: column;
 
       .form__col {
