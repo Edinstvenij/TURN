@@ -417,6 +417,11 @@ body {
       margin-bottom: 19px;
     }
 
+    @media(max-height: 735px) and (min-width: 1300px) {
+      margin-bottom: 6px;
+      font-size: 35px;
+    }
+
     @media(max-height: 485px) {
       margin-bottom: 6px;
     }
@@ -438,6 +443,11 @@ body {
 
     @media(min-width:1670px) {
       margin-bottom: 13px;
+    }
+
+    @media(max-height: 735px) and (min-width: 1300px) {
+      margin-bottom: 6px;
+      font-size: 18px;
     }
 
     @media(max-height: 665px) {

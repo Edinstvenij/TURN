@@ -562,6 +562,13 @@ body {
   }
 }
 
+@media (max-height: 735px) and (min-width: 1300px) {
+  .footer__col-name {
+    margin-bottom: 6px;
+    font-size: 35px;
+  }
+}
+
 @media (max-height: 485px) {
   .footer__col-name {
     margin-bottom: 6px;
@@ -596,6 +603,13 @@ body {
 @media (min-width: 1670px) {
   .footer__col-li {
     margin-bottom: 13px;
+  }
+}
+
+@media (max-height: 735px) and (min-width: 1300px) {
+  .footer__col-li {
+    margin-bottom: 6px;
+    font-size: 18px;
   }
 }
 
