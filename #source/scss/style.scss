@@ -88,6 +88,8 @@ body {
 
       .header__burger {
         transform: translateX(600px);
+
+
       }
 
       .header__nav-close {
@@ -116,12 +118,33 @@ body {
     @include adaptiv-font(14, 13);
     font-size: 14px;
     font-weight: 600;
+    overflow: hidden;
 
     cursor: pointer;
     transition: transform 1s;
 
     @media(max-width:470px) {
       right: 20px;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 85%;
+      height: 2px;
+
+      background: #000;
+      border-radius: 10px;
+      transform: translateX(-110%);
+      transform-origin: 0 0;
+      transition: transform 0.4s;
+    }
+
+    &:hover {
+
+      &::after {
+        transform: translateX(2%);
+      }
     }
 
   }
@@ -190,6 +213,7 @@ body {
     color: #FFFFFF;
     @include adaptiv-font(64, 23);
     line-height: 85px;
+    overflow: hidden;
 
     transition: transform 1s;
 
@@ -199,6 +223,26 @@ body {
       display: block;
       padding-left: 35px;
       color: inherit;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+
+        background: #FFD704;
+        border-radius: 10px;
+        transform: translateX(-130%);
+        transform-origin: 0 0;
+        transition: transform 0.4s;
+      }
+
+      &:hover {
+
+        &::after {
+          transform: translateX(-10%);
+        }
+      }
     }
 
     @media (min-width: 1850px) {
@@ -258,6 +302,14 @@ body {
     @media(max-width:600px) {
       top: 20px;
       right: 20px;
+    }
+
+    &:hover {
+
+      &::before,
+      &::after {
+        background: #FFD704;
+      }
     }
   }
 }
@@ -417,7 +469,7 @@ body {
       margin-bottom: 19px;
     }
 
-    @media(max-height: 735px) and (min-width: 1150px) {
+    @media(max-height: 735px) and (min-width: 900px) {
       margin-bottom: 6px;
       font-size: 50px;
     }
@@ -445,7 +497,7 @@ body {
       margin-bottom: 13px;
     }
 
-    @media(max-height: 735px) and (min-width: 1150px) {
+    @media(max-height: 735px) and (min-width: 900px) {
       margin-bottom: 6px;
       font-size: 18px;
     }
@@ -493,6 +545,10 @@ body {
 
     margin-bottom: 33px;
 
+    &:focus {
+      box-shadow: 0px 0px 10px #d3b108;
+    }
+
     @media(min-width:1670px) {
       @include adaptiv-font(24, 13);
     }
@@ -526,6 +582,17 @@ body {
     background: #FFD704;
 
     margin-bottom: 15px;
+
+    transition: box-shadow 0.4s, transform 0.4s;
+
+    &:hover {
+      box-shadow: 0px 10px #d3b108;
+    }
+
+    &:active {
+      box-shadow: 0px 5px #d3b108;
+      transform: translateY(6px);
+    }
 
     @media(max-height: 485px) {
       padding: 4px 0px;
