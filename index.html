@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <header class="header">
+  <header id="top" class="header">
     <div class="header__wrapper">
       <section class="header__body">
         <div class="swiper slider">
@@ -51,7 +51,7 @@
           <div class="header__logo wrapper-img wrapper-header-logo">
             <img src="img/logo.svg" alt="">
           </div>
-          <p class="header__burger header__open-close">MENU+</p>
+          <p class="header__burger header__open-close"><a href="#top">MENU</a>+</p>
         </div>
         <div class="header__marquee">
           <div>
@@ -65,10 +65,10 @@
       <nav class="header__nav">
         <div class="header__nav-close header__open-close"></div>
         <ul>
-          <li class="header__nav-li"><a href="all-product.html">Shop</a></li>
-          <li class="header__nav-li"><a href="#">Designer</a></li>
-          <li class="header__nav-li"><a href="#">Delivery</a></li>
-          <li class="header__nav-li"><a href="#">Catalog</a></li>
+          <li class="header__nav-li"><a href="all-product.html"><span>Shop</span></a></li>
+          <li class="header__nav-li"><a href="#"><span>Designer</span></a></li>
+          <li class="header__nav-li"><a href="#"><span>Delivery</span></a></li>
+          <li class="header__nav-li"><a href="#"><span>Catalog</span></a></li>
         </ul>
       </nav>
     </div>
@@ -84,10 +84,12 @@
             <h2 class="footer__col-name">Product</h2>
             <nav class="footer__col-nav">
               <ul>
-                <li class="footer__col-li"><a href="#">Virtual showroom</a></li>
-                <li class="footer__col-li"><a href="#">Catalog</a></li>
-                <li class="footer__col-li"><a href="#">Shiping</a></li>
-                <li class="footer__col-li"><a href="#">FAQ</a></li>
+                <span>
+                  <li class="footer__col-li"><a href="#"><span>Virtual showroom</span></a></li>
+                </span>
+                <li class="footer__col-li"><a href="#"><span>Catalog</span></a></li>
+                <li class="footer__col-li"><a href="#"><span>Shiping</span></a></li>
+                <li class="footer__col-li"><a href="#"><span>FAQ</span></a></li>
               </ul>
             </nav>
           </div>
@@ -99,11 +101,12 @@
               <div class="col">
                 <nav class="footer__col-nav">
                   <ul>
-                    <li class="footer__col-li"><a href="https://www.instagram.com/furn_manufacture/">instagram</a></li>
-                    <li class="footer__col-li"><a href="#">Behance</a></li>
-                    <li class="footer__col-li"><a href="#">Pinterest</a></li>
-                    <li class="footer__col-li"><a href="#">Whatsapp</a></li>
-                    <li class="footer__col-li"><a href="#">Telegram</a></li>
+                    <li class="footer__col-li"><a
+                        href="https://www.instagram.com/furn_manufacture/"><span>instagram</span></a></li>
+                    <li class="footer__col-li"><a href="#"><span>Behance</span></a></li>
+                    <li class="footer__col-li"><a href="#"><span>Pinterest</span></a></li>
+                    <li class="footer__col-li"><a href="#"><span>Whatsapp</span></a></li>
+                    <li class="footer__col-li"><a href="#"><span>Telegram</span></a></li>
                   </ul>
                 </nav>
               </div>
@@ -115,9 +118,10 @@
             <h2 class="footer__col-name">Contacts</h2>
             <nav class="footer__col-nav">
               <ul>
-                <li class="footer__col-li"><a href="mailto:furn.manufacture@gmail.com">furn.manufacture@gmail.com</a>
+                <li class="footer__col-li"><a
+                    href="mailto:furn.manufacture@gmail.com"><span>furn.manufacture@gmail.com</span></a>
                 </li>
-                <li class="footer__col-li"><a href="tel:+380678366299">+380678366299</a></li>
+                <li class="footer__col-li"><a href="tel:+380678366299"><span>+380678366299</span></a></li>
                 <li class="footer__col-li">Ukraine, Odessa</li>
               </ul>
             </nav>
@@ -129,12 +133,13 @@
               <div class="row row-jcsb form-row">
                 <div class="col form__col">
                   <label for="user-email" class="footer__col-name form__input-name">Your email</label>
-                  <input class="form__input" id="user-email" type="text" name="user-email"
-                    placeholder="mail@example.com">
+                  <input class="form__input" id="user-email" type="email" name="user-email"
+                    placeholder="mail@example.com" required>
                 </div>
                 <div class="col">
                   <label for="user-name" class="footer__col-name form__input-name">Your name</label>
-                  <input class="form__input" id="user-name" type="text" name="user-name" placeholder="John Smith">
+                  <input title="" class="form__input" id="user-name" type="text" name="user-name"
+                    placeholder="John Smith" minlength="2" maxlength="20" required>
                 </div>
               </div>
               <button class="form__button" type="submit">SUBMIT</button>

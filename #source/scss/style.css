@@ -92,9 +92,17 @@ $mobSize (mobail font-size \ Подставляем размер шрифта д
 /**
 index.html
 **/
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Futura;
   font-weight: 500;
+}
+
+body.active {
+  overflow: hidden;
 }
 
 .container {
@@ -166,10 +174,10 @@ body {
   font-weight: 600;
   overflow: hidden;
   cursor: pointer;
-  -webkit-transition: -webkit-transform 1s;
-  transition: -webkit-transform 1s;
-  transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
 }
 
 @media (max-width: 767px) {
@@ -184,32 +192,19 @@ body {
   }
 }
 
+.header__burger a {
+  color: inherit;
+}
+
 @media (max-width: 470px) {
   .header__burger {
     right: 20px;
   }
 }
 
-.header__burger::after {
-  content: '';
-  display: block;
-  width: 85%;
-  height: 2px;
-  background: #000;
-  border-radius: 10px;
-  -webkit-transform: translateX(-110%);
-          transform: translateX(-110%);
-  -webkit-transform-origin: 0 0;
-          transform-origin: 0 0;
-  -webkit-transition: -webkit-transform 0.4s;
-  transition: -webkit-transform 0.4s;
-  transition: transform 0.4s;
-  transition: transform 0.4s, -webkit-transform 0.4s;
-}
-
-.header__burger:hover::after {
-  -webkit-transform: translateX(2%);
-          transform: translateX(2%);
+.header__burger:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
 }
 
 .header__marquee {
@@ -314,15 +309,19 @@ body {
   color: inherit;
 }
 
-.header__nav-li a::after {
+.header__nav-li a span {
+  display: inline-block;
+}
+
+.header__nav-li a span::after {
   content: '';
   display: block;
   width: 100%;
-  height: 2px;
+  height: 4px;
   background: #FFD704;
   border-radius: 10px;
-  -webkit-transform: translateX(-130%);
-          transform: translateX(-130%);
+  -webkit-transform: translateX(-200%);
+          transform: translateX(-200%);
   -webkit-transform-origin: 0 0;
           transform-origin: 0 0;
   -webkit-transition: -webkit-transform 0.4s;
@@ -331,9 +330,9 @@ body {
   transition: transform 0.4s, -webkit-transform 0.4s;
 }
 
-.header__nav-li a:hover::after {
-  -webkit-transform: translateX(-10%);
-          transform: translateX(-10%);
+.header__nav-li a:hover span::after {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
 }
 
 @media (min-width: 1850px) {
@@ -651,15 +650,23 @@ body {
   width: 100%;
 }
 
-.footer__col-li a::after {
+.footer__col-li a span {
+  position: relative;
+  display: inline-block;
+}
+
+.footer__col-li a span::after {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
   content: '';
   display: block;
   width: 100%;
   height: 2px;
   background: #FFD704;
   border-radius: 10px;
-  -webkit-transform: translateX(-130%);
-          transform: translateX(-130%);
+  -webkit-transform: translateX(-200%);
+          transform: translateX(-200%);
   -webkit-transform-origin: 0 0;
           transform-origin: 0 0;
   -webkit-transition: -webkit-transform 0.4s;
@@ -668,7 +675,7 @@ body {
   transition: transform 0.4s, -webkit-transform 0.4s;
 }
 
-.footer__col-li a:hover::after {
+.footer__col-li a:hover span::after {
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
 }
@@ -698,7 +705,7 @@ body {
   }
 }
 
-@media (max-width: 605px) {
+@media (max-width: 605px), (max-height: 570px) {
   .footer__col-li {
     line-height: normal;
   }
@@ -745,8 +752,8 @@ body {
 }
 
 .form__input:focus {
-  -webkit-box-shadow: 0px 0px 10px #d3b108;
-          box-shadow: 0px 0px 10px #d3b108;
+  -webkit-box-shadow: 0px 0px 7px 4px #d3b108;
+          box-shadow: 0px 0px 7px 4px #d3b108;
 }
 
 @media (min-width: 1670px) and (max-width: 767px) {
@@ -792,10 +799,10 @@ body {
   color: #000000;
   background: #FFD704;
   margin-bottom: 15px;
-  -webkit-transition: -webkit-box-shadow 0.4s, -webkit-transform 0.4s;
-  transition: -webkit-box-shadow 0.4s, -webkit-transform 0.4s;
-  transition: box-shadow 0.4s, transform 0.4s;
-  transition: box-shadow 0.4s, transform 0.4s, -webkit-box-shadow 0.4s, -webkit-transform 0.4s;
+  -webkit-transition: border-radius 0.2s, -webkit-box-shadow 0.4s, -webkit-transform 0.4s;
+  transition: border-radius 0.2s, -webkit-box-shadow 0.4s, -webkit-transform 0.4s;
+  transition: box-shadow 0.4s, transform 0.4s, border-radius 0.2s;
+  transition: box-shadow 0.4s, transform 0.4s, border-radius 0.2s, -webkit-box-shadow 0.4s, -webkit-transform 0.4s;
 }
 
 @media (max-width: 767px) {
@@ -810,9 +817,10 @@ body {
   }
 }
 
-.form__button:hover {
+.form__button:hover, .form__button:focus {
   -webkit-box-shadow: 0px 10px #d3b108;
           box-shadow: 0px 10px #d3b108;
+  border-radius: 10px;
 }
 
 .form__button:active {
