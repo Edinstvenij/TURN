@@ -942,7 +942,7 @@ product-page.html
   }
 
   &__info-name {
-    @include adaptiv-font(26, 12);
+    @include adaptiv-font(20, 12);
     white-space: nowrap;
     color: inherit;
 
@@ -959,12 +959,12 @@ product-page.html
     }
 
     @media (max-height: 600px) {
-      font-size: 18px;
+      font-size: 16px;
       margin-bottom: 10px;
     }
 
     @media (max-width: 510px) {
-      font-size: 16px;
+      font-size: 14px;
       margin-bottom: 10px;
     }
 
@@ -975,10 +975,10 @@ product-page.html
   }
 
   &__info-ul {
-    margin-bottom: 34px;
+    margin-bottom: 30px;
 
     @media (max-width:630px) {
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
 
   }
@@ -993,16 +993,16 @@ product-page.html
     }
 
     @media (max-height: 720px) {
-      font-size: 18px;
+      font-size: 16px;
       margin-bottom: 4px;
     }
 
     @media (max-height: 600px) {
-      font-size: 13px;
+      font-size: 11px;
     }
 
     @media (max-width: 510px) {
-      font-size: 12px;
+      font-size: 11px;
     }
 
     @media (max-width:300px) {

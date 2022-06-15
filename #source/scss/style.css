@@ -1218,13 +1218,13 @@ product-page.html
 
 @media (max-width: 767px) {
   .product-info__info-name {
-    font-size: calc(12px + 23.8 * ((100vw - 320px) / 1236));
+    font-size: calc(12px + 13.6 * ((100vw - 320px) / 1236));
   }
 }
 
 @media (min-width: 767px) {
   .product-info__info-name {
-    font-size: calc(12px + 14 * (100vw / 1236));
+    font-size: calc(12px + 8 * (100vw / 1236));
   }
 }
 
@@ -1242,14 +1242,14 @@ product-page.html
 
 @media (max-height: 600px) {
   .product-info__info-name {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 10px;
   }
 }
 
 @media (max-width: 510px) {
   .product-info__info-name {
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 10px;
   }
 }
@@ -1261,12 +1261,12 @@ product-page.html
 }
 
 .product-info__info-ul {
-  margin-bottom: 34px;
+  margin-bottom: 30px;
 }
 
 @media (max-width: 630px) {
   .product-info__info-ul {
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
 }
 
@@ -1293,20 +1293,20 @@ product-page.html
 
 @media (max-height: 720px) {
   .product-info__info-li {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 4px;
   }
 }
 
 @media (max-height: 600px) {
   .product-info__info-li {
-    font-size: 13px;
+    font-size: 11px;
   }
 }
 
 @media (max-width: 510px) {
   .product-info__info-li {
-    font-size: 12px;
+    font-size: 11px;
   }
 }
 
