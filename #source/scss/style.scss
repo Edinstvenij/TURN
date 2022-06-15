@@ -917,14 +917,14 @@ product-page.html
 
   padding: 5px 38px;
   background: #676767;
-  min-height: 52%;
+  height: 46%;
 
   overflow: hidden;
   text-transform: uppercase;
 
 
   @media (max-height:720px) {
-    height: 46%;
+    height: 43%;
   }
 
   &__wrapper {
