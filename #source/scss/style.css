@@ -307,32 +307,12 @@ body.active {
   display: block;
   padding-left: 35px;
   color: inherit;
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s;
 }
 
-.header__nav-li a span {
-  display: inline-block;
-}
-
-.header__nav-li a span::after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 4px;
-  background: #FFD704;
-  border-radius: 10px;
-  -webkit-transform: translateX(-200%);
-          transform: translateX(-200%);
-  -webkit-transform-origin: 0 0;
-          transform-origin: 0 0;
-  -webkit-transition: -webkit-transform 0.4s;
-  transition: -webkit-transform 0.4s;
-  transition: transform 0.4s;
-  transition: transform 0.4s, -webkit-transform 0.4s;
-}
-
-.header__nav-li a:hover span::after {
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
+.header__nav-li a:hover {
+  color: #FFD704;
 }
 
 @media (min-width: 1850px) {
