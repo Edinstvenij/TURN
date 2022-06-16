@@ -922,6 +922,10 @@ all-product.html
   margin-right: 0px;
 }
 
+.product-all-product {
+  padding-bottom: 50px;
+}
+
 .grid__body {
   display: -ms-grid;
   display: grid;
