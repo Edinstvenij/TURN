@@ -1,15 +1,15 @@
 <?php
 
 $formName = $_POST['form-name'];
-$name = $_POST['user-name'];
-$email = $_POST['user-email'];
+$name = $_POST['name'];
+$email = $_POST['email'];
 // $msg = $_POST['msg'];
 $token = "5496993998:AAE2ZHHMi_3aqY3hp1nrF-ae9yLcsxsWqAE";
 $chat_id = "-1001569814825";
 $arr = array(
-  'Заявка с ' => $formName,
-  'Имя пользователя: ' => $name,
-  'Email' => $email,
+  'Form name: ' => $formName,
+  'User name: ' => $name,
+  'User email' => $email,
   // 'Сообщение:' => $msg
 );
 
