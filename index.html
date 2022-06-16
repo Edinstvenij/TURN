@@ -150,10 +150,10 @@
         </div>
         <div class="row">
           <div class="col">
-            <form class="form" action="telegram.php" method="POST">
+            <form class="form">
               <div class="row row-jcsb form-row">
                 <div class="col form__col">
-                  <input type="hidden" name="form-name" value="form user contacts">
+                  <input name="form-name" type="hidden" value="Form user-contacts">
                   <label for="user-email" class="footer__col-name form__input-name">Your email</label>
                   <input class="form__input" id="user-email" type="email" name="email" placeholder="mail@example.com"
                     required>
@@ -164,7 +164,7 @@
                     minlength="2" maxlength="20" required>
                 </div>
               </div>
-              <button class="form__button" type="submit">SUBMIT</button>
+              <button id="tg-form-btn" class="form__button" type="submit">SUBMIT</button>
             </form>
             <p class="form__info">
               Enter your e-mail to be the first to know about our new <br>
@@ -178,6 +178,7 @@
   </footer>
   <script src="js/swiper.js"></script>
   <script src="js/jquery.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
