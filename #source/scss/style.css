@@ -92,9 +92,17 @@ $mobSize (mobail font-size \ Подставляем размер шрифта д
 /**
 index.html
 **/
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Futura;
   font-weight: 500;
+}
+
+body.active {
+  overflow: hidden;
 }
 
 .container {
@@ -164,11 +172,12 @@ body {
   right: 63px;
   font-size: 14px;
   font-weight: 600;
+  overflow: hidden;
   cursor: pointer;
-  -webkit-transition: -webkit-transform 1s;
-  transition: -webkit-transform 1s;
-  transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
 }
 
 @media (max-width: 767px) {
@@ -183,10 +192,19 @@ body {
   }
 }
 
+.header__burger a {
+  color: inherit;
+}
+
 @media (max-width: 470px) {
   .header__burger {
     right: 20px;
   }
+}
+
+.header__burger:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
 }
 
 .header__marquee {
@@ -264,6 +282,7 @@ body {
 .header__nav-li {
   color: #FFFFFF;
   line-height: 85px;
+  overflow: hidden;
   -webkit-transition: -webkit-transform 1s;
   transition: -webkit-transform 1s;
   transition: transform 1s;
@@ -288,6 +307,12 @@ body {
   display: block;
   padding-left: 35px;
   color: inherit;
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s;
+}
+
+.header__nav-li a:hover {
+  color: #FFD704;
 }
 
 @media (min-width: 1850px) {
@@ -349,6 +374,10 @@ body {
     top: 20px;
     right: 20px;
   }
+}
+
+.header__nav-close:hover::before, .header__nav-close:hover::after {
+  background: #FFD704;
 }
 
 @-webkit-keyframes marquee-infinite {
@@ -465,7 +494,7 @@ body {
 }
 
 .wrapper-footer-logo {
-  width: 94px;
+  width: 83px;
   margin-right: 36px;
 }
 
@@ -562,6 +591,13 @@ body {
   }
 }
 
+@media (max-height: 735px) and (min-width: 900px) {
+  .footer__col-name {
+    margin-bottom: 6px;
+    font-size: 50px;
+  }
+}
+
 @media (max-height: 485px) {
   .footer__col-name {
     margin-bottom: 6px;
@@ -572,6 +608,8 @@ body {
   text-transform: uppercase;
   color: #fff;
   margin-bottom: 10px;
+  line-height: 24px;
+  overflow: hidden;
 }
 
 @media (max-width: 767px) {
@@ -592,9 +630,46 @@ body {
   width: 100%;
 }
 
+.footer__col-li a span {
+  position: relative;
+  display: inline-block;
+}
+
+.footer__col-li a span::after {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #FFD704;
+  border-radius: 10px;
+  -webkit-transform: translateX(-200%);
+          transform: translateX(-200%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+}
+
+.footer__col-li a:hover span::after {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
 @media (min-width: 1670px) {
   .footer__col-li {
     margin-bottom: 13px;
+  }
+}
+
+@media (max-height: 735px) and (min-width: 900px) {
+  .footer__col-li {
+    margin-bottom: 6px;
+    font-size: 18px;
   }
 }
 
@@ -607,6 +682,12 @@ body {
 @media (max-height: 485px) {
   .footer__col-li {
     margin-bottom: 3px;
+  }
+}
+
+@media (max-width: 605px), (max-height: 570px) {
+  .footer__col-li {
+    line-height: normal;
   }
 }
 
@@ -650,6 +731,11 @@ body {
   }
 }
 
+.form__input:focus {
+  -webkit-box-shadow: 0px 0px 7px 4px #d3b108;
+          box-shadow: 0px 0px 7px 4px #d3b108;
+}
+
 @media (min-width: 1670px) and (max-width: 767px) {
   .form__input {
     font-size: calc(13px + 18.7 * ((100vw - 320px) / 1236));
@@ -675,7 +761,7 @@ body {
   }
 }
 
-@media (max-width: 367px) {
+@media (max-width: 427px) {
   .form-row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -693,6 +779,10 @@ body {
   color: #000000;
   background: #FFD704;
   margin-bottom: 15px;
+  -webkit-transition: border-radius 0.2s, -webkit-box-shadow 0.4s, -webkit-transform 0.4s;
+  transition: border-radius 0.2s, -webkit-box-shadow 0.4s, -webkit-transform 0.4s;
+  transition: box-shadow 0.4s, transform 0.4s, border-radius 0.2s;
+  transition: box-shadow 0.4s, transform 0.4s, border-radius 0.2s, -webkit-box-shadow 0.4s, -webkit-transform 0.4s;
 }
 
 @media (max-width: 767px) {
@@ -705,6 +795,19 @@ body {
   .form__button {
     font-size: calc(13px + 3 * (100vw / 1236));
   }
+}
+
+.form__button:hover, .form__button:focus {
+  -webkit-box-shadow: 0px 10px #d3b108;
+          box-shadow: 0px 10px #d3b108;
+  border-radius: 10px;
+}
+
+.form__button:active {
+  -webkit-box-shadow: 0px 5px #d3b108;
+          box-shadow: 0px 5px #d3b108;
+  -webkit-transform: translateY(6px);
+          transform: translateY(6px);
 }
 
 @media (max-height: 485px) {
@@ -980,6 +1083,7 @@ product-page.html
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  cursor: pointer;
 }
 
 @media (max-width: 761px) {
@@ -1077,14 +1181,14 @@ product-page.html
           align-items: center;
   padding: 5px 38px;
   background: #676767;
-  min-height: 52%;
+  height: 46%;
   overflow: hidden;
   text-transform: uppercase;
 }
 
 @media (max-height: 720px) {
   .product-info {
-    height: 46%;
+    height: 43%;
   }
 }
 
@@ -1114,13 +1218,13 @@ product-page.html
 
 @media (max-width: 767px) {
   .product-info__info-name {
-    font-size: calc(12px + 23.8 * ((100vw - 320px) / 1236));
+    font-size: calc(12px + 13.6 * ((100vw - 320px) / 1236));
   }
 }
 
 @media (min-width: 767px) {
   .product-info__info-name {
-    font-size: calc(12px + 14 * (100vw / 1236));
+    font-size: calc(12px + 8 * (100vw / 1236));
   }
 }
 
@@ -1138,14 +1242,14 @@ product-page.html
 
 @media (max-height: 600px) {
   .product-info__info-name {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 10px;
   }
 }
 
 @media (max-width: 510px) {
   .product-info__info-name {
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 10px;
   }
 }
@@ -1157,12 +1261,12 @@ product-page.html
 }
 
 .product-info__info-ul {
-  margin-bottom: 34px;
+  margin-bottom: 30px;
 }
 
 @media (max-width: 630px) {
   .product-info__info-ul {
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
 }
 
@@ -1189,20 +1293,20 @@ product-page.html
 
 @media (max-height: 720px) {
   .product-info__info-li {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 4px;
   }
 }
 
 @media (max-height: 600px) {
   .product-info__info-li {
-    font-size: 13px;
+    font-size: 11px;
   }
 }
 
 @media (max-width: 510px) {
   .product-info__info-li {
-    font-size: 12px;
+    font-size: 11px;
   }
 }
 
