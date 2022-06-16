@@ -703,12 +703,12 @@ all-product.html
   &__body {
     display: grid;
 
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     grid-auto-flow: row;
 
-    column-gap: 10px;
-    row-gap: 20px;
+    column-gap: 30px;
+    row-gap: 50px;
 
     align-items: center;
 
@@ -747,6 +747,10 @@ all-product.html
 
     transition: all 0.4s;
     pointer-events: none;
+
+    @media (min-width:1930px) {
+      font-size: 55px;
+    }
   }
 }
 

@@ -925,14 +925,14 @@ all-product.html
 .grid__body {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
   -ms-grid-rows: auto;
       grid-template-rows: auto;
   grid-auto-flow: row;
-  -webkit-column-gap: 10px;
-          column-gap: 10px;
-  row-gap: 20px;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+  row-gap: 50px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -984,6 +984,12 @@ all-product.html
 @media (min-width: 767px) {
   .grid__item-name {
     font-size: calc(10px + 35 * (100vw / 1236));
+  }
+}
+
+@media (min-width: 1930px) {
+  .grid__item-name {
+    font-size: 55px;
   }
 }
 
