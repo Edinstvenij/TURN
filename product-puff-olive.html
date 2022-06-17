@@ -13,22 +13,39 @@
 </head>
 
 <body>
-  <header class="header-product-preview">
+
+
+  <header class="header-all-product header-product-preview">
     <div class="header-product-preview-wrapper">
       <div class="row row-jcsb row-ai-center">
         <div class="wrapper-img wrapper-header-product-page-logo">
           <a href="index.html"><img src="img/mini-logo.svg" alt=""></a>
         </div>
-        <div class="catalog">
+        <nav class="catalog">
           <ul class="catalog__ul">
-            <li class="catalog__li"><a href="#">table</a></li>
-            <li class="catalog__li"><a href="#">sitting</a></li>
+            <li class="catalog__li" data-filter="all">all</li>
+            <li class="catalog__li" data-filter="table">table</li>
+            <li class="catalog__li" data-filter="sitting">sitting</li>
           </ul>
-          <span class="header-all-product__nav-open"></span>
-        </div>
+          <span class="header__open-close header-all-product__nav-open"></span>
+        </nav>
       </div>
     </div>
+
   </header>
+  <!-- block navigation -->
+  <nav class="header__nav header-all-product__nav">
+    <div class="header__nav-close header__open-close"></div>
+    <ul>
+      <li class="header__nav-li"><a href="all-product.html">Shop</a></li>
+      <li class="header__nav-li"><a href="#">Designer</a></li>
+      <li class="header__nav-li"><a href="#">Delivery</a></li>
+      <li class="header__nav-li"><a href="#">Catalog</a></li>
+    </ul>
+  </nav>
+  <!-- END block navigation -->
+
+
   <section class="product-preview-wrapper">
     <div class="product-preview">
       <!-- Slider main container -->
@@ -94,6 +111,7 @@
   </section>
   <script src="js/swiper.js"></script>
   <script src="js/jquery.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
