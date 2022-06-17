@@ -832,8 +832,8 @@ body {
     width: 100%;
     height: 100%;
 
-    @include adaptiv-font(45, 10);
-    font-weight: 700;
+    @include adaptiv-font(25, 10);
+    font-weight: 500;
 
     color: rgba(0, 55, 255, 0);
     background: rgba(255, 255, 255, 0);
