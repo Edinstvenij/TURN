@@ -673,9 +673,10 @@ all-product.html
   }
 
   &__nav {
+    overflow: hidden;
     position: absolute;
     top: 0%;
-    right: 100%;
+    right: 110%;
     height: 100vh;
 
 
