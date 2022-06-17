@@ -106,8 +106,7 @@ $('.form').on('submit', function (event) {
 const filterItem = document.querySelectorAll('.grid__item');
 
 document.querySelector('.catalog__ul').addEventListener('click', event => {
-  if (event.target.tagName !== 'li') returt = false;
-  console.log(event);
+  if (event.target.tagName !== 'LI') return false;
 
   let filterClass = event.target.dataset['filter'];
 
