@@ -212,7 +212,7 @@ body {
     background: #0038FF;
 
     // transform: translateX(100%);
-    transition: transform 0.7s;
+    transition: transform 0.8s, right 0.6s;
 
     &.active {
       transform: translateX(0);
@@ -664,6 +664,7 @@ all-product.html
 .header-all-product {
   padding-top: 50px;
   margin-bottom: 40px;
+  width: 100%;
 
 
   @media (max-height:671px) {
@@ -673,15 +674,14 @@ all-product.html
 
   &__nav {
     position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 21;
+    top: 0%;
+    right: 100%;
+    height: 100vh;
 
-    height: 100%;
-    transform: translateX(1200px);
+
 
     &.active {
-      transform: translateX(0);
+      right: 0;
 
       .header__burger {
         transform: translateX(600px);
