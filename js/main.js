@@ -34,7 +34,6 @@ new Swiper('.product-preview__slider', {
 
 
 // script Telegram SMS
-
 $('.form').on('submit', function (event) {
 
   event.stopPropagation();
@@ -101,3 +100,23 @@ $('.form').on('submit', function (event) {
   return false;
 });
 // END Telegram SMS
+
+// script filter product
+
+const filterItem = document.querySelectorAll('.grid__item');
+
+document.querySelector('.catalog__ul').addEventListener('click', event => {
+  if (event.target.tagName !== 'li') returt = false;
+  console.log(event);
+
+  let filterClass = event.target.dataset['filter'];
+
+  filterItem.forEach(elem => {
+    elem.classList.remove('hide');
+    if (!elem.classList.contains(filterClass) && filterClass !== 'all') {
+      elem.classList.add('hide');
+    }
+  });
+});
+
+// END filter product
