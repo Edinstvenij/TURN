@@ -56,6 +56,10 @@ body {
 
   &.lock {
     overflow: hidden;
+
+    & .header__nav-overlay {
+      display: block;
+    }
   }
 }
 
@@ -186,13 +190,21 @@ body {
   }
 
   // Блок навигации
+  &__nav-overlay {
+    position: absolute;
+    display: none;
+    height: 100%;
+    width: 100%;
+    z-index: 49;
+  }
+
   &__nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
 
     position: relative;
-    z-index: 5;
+    z-index: 50;
     height: 100%;
     width: 40%;
     // padding: 0px 200px 0px 39px;

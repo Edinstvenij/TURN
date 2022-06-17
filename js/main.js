@@ -4,6 +4,10 @@ $(document).ready(function () {
     $('.header__wrapper , .header-all-product__nav').toggleClass('active');
     $('body').toggleClass('lock');
   });
+  $('.header__nav-overlay').click(function (event) {
+    $('.header__wrapper , .header-all-product__nav').removeClass('active');
+    $('body').removeClass('lock');
+  });
 });
 // END BURGER
 
