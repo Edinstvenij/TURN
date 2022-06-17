@@ -813,7 +813,7 @@ body {
 
     &:hover {
       .grid__item-name {
-        color: rgba(0, 55, 255, 1);
+        color: rgb(73, 77, 78, 1);
         background: rgba(255, 255, 255, 0.4);
       }
     }
@@ -1021,7 +1021,7 @@ product-page.html
 
 
   @media (max-height:720px) {
-    height: 41%;
+    height: 42%;
   }
 
   &__wrapper {

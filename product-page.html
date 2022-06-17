@@ -12,23 +12,35 @@
   <title>FURN product</title>
 </head>
 
-<body>
-  <header class="header-product-preview">
+<body id="top">
+  <header class="header-all-product header-product-preview">
     <div class="header-product-preview-wrapper">
       <div class="row row-jcsb row-ai-center">
         <div class="wrapper-img wrapper-header-product-page-logo">
           <a href="index.html"><img src="img/mini-logo.svg" alt=""></a>
         </div>
-        <div class="catalog">
+        <nav class="catalog">
           <ul class="catalog__ul">
-            <li class="catalog__li"><a href="#">table</a></li>
-            <li class="catalog__li"><a href="#">sitting</a></li>
+            <li class="catalog__li" data-filter="all"><a href="all-product.html">all</a></li>
+            <li class="catalog__li" data-filter="table"><a href="all-product.html">table</a></li>
+            <li class="catalog__li" data-filter="sitting"><a href="all-product.html">sitting</a></li>
           </ul>
-          <span class="header-all-product__nav-open"></span>
-        </div>
+          <a href="#top"><span class="header__open-close header-all-product__nav-open"></span></a>
+        </nav>
       </div>
     </div>
   </header>
+  <!-- block navigation -->
+  <nav class="header__nav header-all-product__nav">
+    <div class="header__nav-close header__open-close"></div>
+    <ul>
+      <li class="header__nav-li"><a href="all-product.html">Shop</a></li>
+      <li class="header__nav-li"><a href="#">Designer</a></li>
+      <li class="header__nav-li"><a href="#">Delivery</a></li>
+      <li class="header__nav-li"><a href="#">Catalog</a></li>
+    </ul>
+  </nav>
+  <!-- END block navigation -->
   <section class="product-preview-wrapper">
     <div class="product-preview">
       <!-- Slider main container -->
@@ -78,7 +90,7 @@
         <!-- If we need titles and order buttons -->
         <div class="col product-preview__slider-col">
           <div class="product-preview__slider-col-wrapper">
-            <p class="product-preview__slider-product-name">metall Table </p>
+            <p class="product-preview__slider-product-name">liquid table</p>
             <button class="product-preview__slider-product-order-button">Check price</button>
           </div>
         </div>
@@ -98,8 +110,7 @@
             <li class="product-info__info-li">wight: 600 cm</li>
             <li class="product-info__info-li">diametr: 300 cm</li>
           </ul>
-          <a class="product-info__info-name" href="#">DOWNLOAD INSTRUCTION</a>
-          <a class="product-info__info-name" href="#">DOWNLOAD 2D 3D </a>
+          <a class="product-info__info-name" href="img/download/LIQUID_TABLE_3D_2D.rar">DOWNLOAD 2D 3D </a>
         </div>
         <div class="product-info__wrapper-row-img">
           <div class="product-info__wrapper-img ">
@@ -114,6 +125,7 @@
   </section>
   <script src="js/swiper.js"></script>
   <script src="js/jquery.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
