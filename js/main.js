@@ -1,7 +1,7 @@
 // script BURGER
 $(document).ready(function () {
   $('.header__open-close').click(function (event) {
-    $('.header__wrapper , body').toggleClass('active');
+    $('.header__wrapper , body , .header-all-product__nav').toggleClass('active');
   });
 });
 // END BURGER
