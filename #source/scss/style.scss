@@ -1172,8 +1172,7 @@ product-page.html
 //popup
 
 .popup-order {
-  // display: none;
-  overflow: scroll;
+  overflow: auto;
   position: absolute;
   top: 0;
   left: 0;

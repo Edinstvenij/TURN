@@ -136,7 +136,7 @@ $(document).ready(function () {
 });
 //  END POPUP-order
 
-// script POPUP-order SMS
+// script POPUP-order (CHECK PRICE) SMS
 $('.popup-order__form').on('submit', function (event) {
 
   event.stopPropagation();
@@ -199,7 +199,8 @@ $('.popup-order__form').on('submit', function (event) {
     complete: function () {
       // Тут можем что-то делать ПОСЛЕ успешной отправки формы
       form.reset()
-      $('.popup-order__form-btn').text('Thank you!').css('background', '#b7ff00')
+      $('.popup-order__form-btn').text('Thank you!').css('background', '#b7ff00');
+      $('.popup-oreder').removeClass('active').delay(2000);
     }
   });
 
