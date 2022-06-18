@@ -124,3 +124,16 @@ document.querySelector('.catalog__ul').addEventListener('click', event => {
 });
 
 // END filter product
+
+//  script POPUP-order
+$(document).ready(function () {
+  $('.product-preview__slider-product-order-button').click(function (event) {
+    $('.popup-order').toggleClass('active');
+    $('body').toggleClass('lock');
+  });
+  $('.header__nav-overlay').click(function (event) {
+    $('.popup-order').removeClass('active');
+    $('body').removeClass('lock');
+  });
+});
+//  END POPUP-order
