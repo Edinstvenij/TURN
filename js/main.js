@@ -200,7 +200,13 @@ $('.popup-order__form').on('submit', function (event) {
       // Тут можем что-то делать ПОСЛЕ успешной отправки формы
       form.reset()
       $('.popup-order__form-btn').text('Thank you!').css('background', '#b7ff00');
-      $('.popup-oreder').removeClass('active').delay(2000);
+
+      function deleteClass() {
+        $('.popup-order').removeClass('active');
+        $('body').removeClass('lock');
+      };
+
+      setTimeout(deleteClass, 1500);
     }
   });
 
