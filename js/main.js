@@ -107,7 +107,6 @@ $('.form').on('submit', function (event) {
 // END Telegram SMS
 
 // script filter product
-
 const filterItem = document.querySelectorAll('.grid__item');
 
 document.querySelector('.catalog__ul').addEventListener('click', event => {
@@ -122,11 +121,11 @@ document.querySelector('.catalog__ul').addEventListener('click', event => {
     }
   });
 });
-
 // END filter product
 
 //  script POPUP-order
 $(document).ready(function () {
+
   $('.product-preview__slider-product-order-button').click(function (event) {
     $('.popup-order').toggleClass('active');
     $('body').toggleClass('lock');

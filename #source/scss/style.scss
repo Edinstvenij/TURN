@@ -1011,7 +1011,12 @@ product-page.html
       color: #FFFFFF;
       background: #676767;
 
-      text-transform: uppercase
+      text-align: center;
+      text-transform: uppercase;
+
+      & a {
+        color: inherit;
+      }
     }
 
 
