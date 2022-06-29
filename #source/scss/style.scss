@@ -1339,3 +1339,35 @@ product-page.html
     }
   }
 }
+
+.delivery {
+  padding: 30px 0px 83px;
+
+  &__item {
+    margin-bottom: 45px;
+  }
+
+  &__title {
+    font-weight: 600;
+    @include adaptiv-font(30, 15);
+
+    margin-bottom: 63px;
+  }
+
+  &__text {
+    @include adaptiv-font(23, 11);
+    line-height: 35px;
+
+    & p a {
+      color: inherit;
+      text-decoration: underline;
+
+      transition: color 0.2s;
+
+      &:hover,
+      &:focus {
+        color: #0038FF;
+      }
+    }
+  }
+}
