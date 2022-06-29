@@ -1,6 +1,6 @@
 <?php
 $products = [
-  'filter' => [
+  'filters' => [
     'all',
     'table',
     'sitting'
@@ -95,8 +95,8 @@ $products = [
         </div>
         <nav class="catalog">
           <ul class="catalog__ul">
-            <?php for ($i = 0, $count = count($products['filter']); $i < $count; $i++) : ?>
-              <li class="catalog__li" data-filter="<? echo $products['filter'][$i]; ?>"><? echo $products['filter'][$i] ?></li>
+            <?php for ($i = 0, $count = count($products['filters']); $i < $count; $i++) : ?>
+              <li class="catalog__li" data-filter="<? echo $products['filters'][$i] ?>"><? echo $products['filters'][$i] ?></li>
             <?php endfor ?>
           </ul>
           <span class="header__open-close header-all-product__nav-open"></span>
@@ -108,7 +108,7 @@ $products = [
     <nav class="header__nav header-all-product__nav">
       <div class="header__nav-close header__open-close"></div>
       <ul>
-        <li class="header__nav-li"><a href="all-product.html">Shop</a></li>
+        <li class="header__nav-li"><a href="all-product.php">Shop</a></li>
         <li class="header__nav-li"><a href="designer.html">Designer</a></li>
         <li class="header__nav-li"><a href="delivery.html">Delivery</a></li>
         <li class="header__nav-li"><a href="#">Catalog</a></li>
