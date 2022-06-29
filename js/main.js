@@ -1,10 +1,16 @@
 // script BURGER
 $(document).ready(function () {
   $('.header__open-close').click(function (event) {
+    $('.popup-order').removeClass('active');
+
     $('.header__wrapper , .header-all-product__nav').toggleClass('active');
-    $('body').toggleClass('lock');
+    $('body').addClass('lock');
   });
   $('.header__nav-overlay').click(function (event) {
+    $('.header__wrapper , .header-all-product__nav').removeClass('active');
+    $('body').removeClass('lock');
+  });
+  $('.header__nav-close').click(function (event) {
     $('.header__wrapper , .header-all-product__nav').removeClass('active');
     $('body').removeClass('lock');
   });
