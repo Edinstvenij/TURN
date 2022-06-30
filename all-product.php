@@ -109,8 +109,9 @@ $products = [
       <div class="header__nav-close header__open-close"></div>
       <ul>
         <li class="header__nav-li"><a href="all-product.php">Shop</a></li>
-        <li class="header__nav-li"><a href="designer.html">Designer</a></li>
-        <li class="header__nav-li"><a href="delivery.html">Delivery</a></li>
+        <li class="header__nav-li"><a href="designer.php">Designer</a></li>
+        <li class="header__nav-li"><a href="delivery.php">Delivery</a></li>
+
         <li class="header__nav-li"><a href="#">Catalog</a></li>
       </ul>
     </nav> <!-- END block navigation -->
@@ -136,8 +137,7 @@ $products = [
       </div>
     </div>
   </section>
-  <script src="js/jquery.js"></script>
-  <script src="js/main.js"></script>
-</body>
 
-</html>
+  <!-- footer -->
+  <?php @include('footer.php') ?>
+  <!-- END footer -->
