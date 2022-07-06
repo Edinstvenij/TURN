@@ -1,9 +1,11 @@
 <!-- header -->
 <?php
 $title = 'Product';
-require 'blocks/header_page.php'
+require_once 'blocks/header_page.php'
 ?>
+<!-- END header -->
 
+<!-- main -->
 <section class="product-preview-wrapper">
   <div class="product-preview">
     <!-- Slider main container -->
@@ -138,9 +140,8 @@ require 'blocks/header_page.php'
     <div class="header__nav-overlay"></div>
   </div>
 </article>
-<script src="js/swiper.js"></script>
-<script src="js/jquery.js"></script>
-<script src="js/main.js"></script>
-</body>
+<!-- END main -->
 
-</html>
+<!-- footer -->
+<?php require_once 'blocks/footer.php' ?>
+<!-- END footer -->
