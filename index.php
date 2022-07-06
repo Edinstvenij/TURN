@@ -41,7 +41,7 @@ $slideSwiper = [
 
 <!-- header -->
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -90,7 +90,7 @@ $slideSwiper = [
         </div>
       </section>
       <!-- block navigation -->
-      <?php @include('navigation.php') ?>
+      <?php require_once('blocks/navigation.php') ?>
       <!-- END block navigation -->
     </div>
   </header>
@@ -173,5 +173,5 @@ $slideSwiper = [
     </div>
   </footer>
   <!-- footer -->
-  <?php @include('footer.php') ?>
+  <?php require_once('blocks/footer.php') ?>
   <!-- END footer -->

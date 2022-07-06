@@ -1,7 +1,12 @@
 <!-- header -->
-<?php @include 'header_page.php'; ?>
+
+<?php
+$title = 'Designer';
+require_once('blocks/header_page.php');
+?>
 <!-- END header  -->
 
+<!-- main -->
 <article class="designer-info">
   <div class="container">
     <div class="designer-info__text">
@@ -33,7 +38,8 @@
     </div>
   </div>
 </article>
+<!-- END main -->
 
 <!-- footer -->
-<?php @include('footer.php') ?>
+<?php require_once('blocks/footer.php') ?>
 <!-- END footer -->

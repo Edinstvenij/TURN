@@ -75,7 +75,7 @@ $products = [
 
 <!-- header -->
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -116,6 +116,9 @@ $products = [
       </ul>
     </nav> <!-- END block navigation -->
   </header>
+  <!-- END header -->
+
+  <!-- main -->
   <section class="product-all-product">
     <div class="container">
       <div class="grid">
@@ -137,7 +140,8 @@ $products = [
       </div>
     </div>
   </section>
+  <!-- END main -->
 
   <!-- footer -->
-  <?php @include('footer.php') ?>
+  <?php require_once('blocks/footer.php') ?>
   <!-- END footer -->

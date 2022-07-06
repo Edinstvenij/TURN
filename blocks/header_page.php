@@ -1,6 +1,6 @@
 <!-- header -->
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <link rel="icon" href="img/favicon.ico">
   <link rel="stylesheet" href="css/swiper.css" />
   <link rel="stylesheet" href="css/style.min.css">
-  <title>Designer</title>
+  <title><?= $title ?></title>
 </head>
 
 <body>

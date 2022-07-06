@@ -1,6 +1,10 @@
 <!-- header -->
-<?php @include 'header_page.php'; ?>
+<?php
+$title = 'Delivery';
+require_once('blocks/header_page.php') ?>
 <!-- END header  -->
+
+<!-- main -->
 <section class="delivery">
   <div class="container">
     <div class="delivery__item">
@@ -47,7 +51,8 @@
     </div>
   </div>
 </section>
+<!-- END main -->
 
 <!-- footer -->
-<?php @include('footer.php') ?>
+<?php require_once('blocks/footer.php') ?>
 <!-- END footer -->
