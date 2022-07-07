@@ -112,7 +112,7 @@ require_once 'blocks/header_page.php'
 <article class="popup-order">
   <div class="popup-order__row">
     <div class="popup-order__wrapper">
-      <form class="popup-order__form">
+      <form class="popup-order__form" action="telegram.php" method="POST">
         <div class="popup-order__form-item">
           <input type="hidden" name="form-name" value="Check Price">
           <label class="popup-order__form-lable" for="name">your name:</label>
