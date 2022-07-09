@@ -415,20 +415,19 @@ body {
   &-header-all-product-logo {
     width: 37px;
   }
+}
 
-  &-header-product-page-logo {
-    width: 50px;
-    animation: 10s mercury infinite linear;
+.animation-turn {
+  animation: 10s mercury infinite linear;
+}
+
+@keyframes mercury {
+  from {
+    transform: rotate(0)
   }
 
-  @keyframes mercury {
-    from {
-      transform: rotate(0)
-    }
-
-    to {
-      transform: rotate(360deg)
-    }
+  to {
+    transform: rotate(360deg)
   }
 }
 
