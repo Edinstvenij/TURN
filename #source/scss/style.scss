@@ -402,18 +402,18 @@ body {
   }
 
   &-footer-logo {
-    width: 83px;
+    width: 60px;
     margin-right: 36px;
 
     @media(max-width:400px) {
-      width: 50px;
+      width: 40px;
       margin-right: 10px;
     }
   }
 
   //page all-product
   &-header-all-product-logo {
-    width: 50px;
+    width: 37px;
   }
 
   &-header-product-page-logo {
@@ -1027,14 +1027,14 @@ product-page.html
 
   padding: 5px 38px;
   background: #676767;
-  height: 47%;
+  height: 47.5%;
 
   overflow: hidden;
   text-transform: uppercase;
 
 
   @media (max-height:720px) {
-    height: 44%;
+    height: 44.5%;
   }
 
   &__wrapper {
