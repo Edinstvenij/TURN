@@ -24,7 +24,7 @@ var_dump($text);
 
 file_get_contents($url);
 
-foreach ( $_FILES as $file ) {
+foreach ($_FILES as $file) {
 
     $url = "https://api.telegram.org/bot" . $tg_bot_token . "/sendDocument";
 

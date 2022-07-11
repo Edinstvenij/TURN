@@ -141,36 +141,35 @@
       </div>
     </div>
   </section>
+
   <article class="popup-order">
     <div class="popup-order__row">
       <div class="popup-order__wrapper">
         <form class="popup-order__form">
           <div class="popup-order__form-item">
             <input type="hidden" name="form-name" value="Check Price">
-            <label class="popup-order__form-lable" for="name">your name:</label>
-            <input class="popup-order__form-input" id="name" type="text" name="name" placeholder="enter your the name"
+            <input class="popup-order__form-input" id="name" type="text" name="name" placeholder="YOUR NAME" required>
+          </div>
+          <div class="popup-order__form-item">
+            <input class="popup-order__form-input" id="email" type="email" name="email" placeholder="YOUR EMAIL"
               required>
           </div>
           <div class="popup-order__form-item">
-            <label class="popup-order__form-lable" for="email">your email:</label>
-            <input class="popup-order__form-input" id="email" type="email" name="email"
-              placeholder="enter your the mail" required>
+            <input class="popup-order__form-input" id="tel" type="tel" name="tel" placeholder="YOUR PHONE" required>
           </div>
           <div class="popup-order__form-item">
-            <label class="popup-order__form-lable" for="tel">your phone:</label>
-            <input class="popup-order__form-input" id="tel" type="tel" name="tel" placeholder="enter your number"
-              required>
+            <input class="popup-order__form-input" id="country" type="text" name="country"
+              placeholder="COUNTRY OF DELIVERY" required>
           </div>
           <div class="popup-order__form-item">
-            <label class="popup-order__form-lable" for="country">country of delivery:</label>
-            <input class="popup-order__form-input" id="country" type="text" name="country" placeholder="enter country"
-              required>
+            <input class="popup-order__form-input" id="address" type="text" name="address"
+              placeholder="Address of delivery" required>
           </div>
           <div class="popup-order__form-item">
-            <label class="popup-order__form-lable" for="address">address of the delivery:</label>
-            <input class="popup-order__form-input" id="address" type="text" name="address" placeholder="enter address"
-              required>
+            <textarea class="popup-order__form-input" name="massege" rows="4" placeholder="YOUR COMMENT"></textarea>
           </div>
+
+
           <button class="popup-order__form-btn" type="submit">SEND</button>
         </form>
       </div>

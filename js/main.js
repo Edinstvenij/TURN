@@ -163,6 +163,7 @@ $('.popup-order__form').on('submit', function (event) {
   data.append('User tel', $('[name="tel"]', form).val());
   data.append('User country', $('[name="country"]', form).val());
   data.append('User address', $('[name="address"]', form).val());
+  data.append('User massege', $('[name="massege"]', form).val());
 
 
   files.each(function (key, file) {

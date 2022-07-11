@@ -1175,7 +1175,7 @@ product-page.html
   height: 100%;
 
   padding: 60px 0px 50px;
-  background: #ffffff;
+  // background: #ffffff;
 
   transition: transform 0.6s;
   transform: translateY(-100%);
@@ -1201,11 +1201,11 @@ product-page.html
     transform: translateY(-50%);
     z-index: 200;
     min-width: 240px;
-    max-width: 35%;
+    max-width: 340px;
     height: 110%;
     margin: 0 auto;
 
-    background: #FFFFFF;
+    // background: #FFFFFF;
   }
 
   &__form {
@@ -1220,7 +1220,6 @@ product-page.html
     margin: 0 auto;
 
     text-align: center;
-    width: max-content;
 
     @media (max-height:850px) {
       padding: 30px 0px 0px;
@@ -1239,61 +1238,68 @@ product-page.html
     }
   }
 
-  &__form-lable {
-    @include adaptiv-font(30, 13);
-    text-transform: uppercase;
-    font-weight: 400;
+  // &__form-lable {
+  //   @include adaptiv-font(30, 13);
+  //   text-transform: uppercase;
+  //   font-weight: 400;
 
-    margin-bottom: 10px;
+  //   margin-bottom: 10px;
 
-    @media (max-height:650px),
-    (max-width:768px) {
-      font-size: 16px;
-    }
+  //   @media (max-height:650px),
+  //   (max-width:768px) {
+  //     font-size: 16px;
+  //   }
 
-  }
+  // }
 
   &__form-input {
     width: 100%;
     margin: 0 auto;
-    border: 1px solid #000000;
-    padding: 8px 0px 8px 22px;
+    padding: 14px 3px 14px 8px;
     @include adaptiv-font(14, 10);
 
     color: #000000;
     font-weight: 400;
 
+    resize: none;
+
     &::placeholder {
       text-transform: uppercase;
     }
 
+    @media (max-width:810px),
+    (max-height:670px) {
+      border: 1px solid #c9c9c9;
+    }
+
     @media (max-height:600px),
     (max-width:768px) {
+
       padding: 5px 0px 5px 11px;
       font-size: 10px;
     }
   }
 
   &__form-btn {
-    margin: auto 0 0;
-    padding: 25px 100px;
-
+    margin: 0 auto;
+    width: 239px;
     text-transform: uppercase;
-    @include adaptiv-font(30, 13);
+    padding: 15px 0px 15px 0px;
+    @include adaptiv-font(18, 13);
 
     background: #000;
     color: #FFFFFF;
 
-    @media (max-height:780px),
-    (max-width:768px) {
-      padding: 12px 100px;
+    // @media (max-height:780px),
+    // (max-width:768px) {
+    //   padding: 12px 100px;
 
-    }
+    // }
 
-    @media (max-height:600px) {
-      padding: 6px 100px;
-      font-size: 15px;
-    }
+    // @media (max-height:600px) {
+    //   padding: 6px 100px;
+    //   font-size: 15px;
+    // }
   }
 }
 
