@@ -29,17 +29,7 @@
       </div>
     </div>
     <!-- block navigation -->
-    <div class="header__nav-overlay"></div>
-    <nav class="header__nav header-all-product__nav">
-      <div class="header__nav-close header__open-close"></div>
-      <ul>
-        <li class="header__nav-li"><a href="all-product.html">Shop</a></li>
-        <li class="header__nav-li"><a href="designer.html">Team</a></li>
-
-        <li class="header__nav-li"><a href="delivery.html">Delivery</a></li>
-        <li class="header__nav-li"><a href="#">Catalog</a></li>
-      </ul>
-    </nav>
+    <?php require_once 'blocks/navigation.php' ?>
     <!-- END block navigation -->
   </header>
   <section class="product-all-product">
@@ -140,9 +130,6 @@
     </div>
   </section>
 
-  <script src="js/swiper.js"></script>
-  <script src="js/jquery.js"></script>
-  <script src="js/main.js"></script>
-</body>
-
-</html>
+  <!-- footer -->
+  <?php require_once 'blocks/footer.php' ?>
+  <!-- END footer -->

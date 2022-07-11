@@ -1,5 +1,8 @@
 <div class="header__nav-overlay"></div>
-<nav class="header__nav">
+<nav class="header__nav 
+  <?php if ($_SERVER['REQUEST_URI'] != '/' && $_SERVER['REQUEST_URI'] != '/index.php') {
+    echo 'header-all-product__nav';
+  } ?>">
   <div class="header__nav-close header__open-close"></div>
   <ul>
     <li class="header__nav-li"><a href="all-product.php">Shop</a></li>
